@@ -3,12 +3,12 @@ version: "3.7"
 services:
   nginx1:
     image: nginx:latest
-    container_name: nginx
     ports:
       - 8000:80
 
   nginx2:
     image: nginx:latest
-    container_name: me
     ports:
-      - 8080:80
+      - 8060:80
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
