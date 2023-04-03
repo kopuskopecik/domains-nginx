@@ -5,6 +5,8 @@ services:
     image: nginx:latest
     ports:
       - 8000:80
+    volumes:
+      - ./first/index.html:/usr/share/nginx/html/index.html
 
   nginx2:
     image: nginx:latest
